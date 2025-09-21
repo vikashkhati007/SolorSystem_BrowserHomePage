@@ -203,7 +203,7 @@
 
         // --- Sun ---
         const sunGeometry = new THREE.SphereGeometry(15, 64, 64);
-        const sunTexture = textureLoader.load('https://raw.githubusercontent.com/vikashkhati007/SolorSystem_BrowserHomePage/main/images/2k_sun.jpg');
+        const sunTexture = textureLoader.load('https://raw.githubusercontent.com/vikashkhati007/SolorSystem_BrowserHomePage/main/images/sun.jpg');
         // Use MeshStandardMaterial with emissive properties to make the sun glow
         const sunMaterial = new THREE.MeshStandardMaterial({
             map: sunTexture,
@@ -224,31 +224,31 @@
 
         // --- Planets ---
         const planetsData = [
-            { name: 'Mercury', radius: 1, color: 0x8c8c8c, distance: 30, speed: 0.04, texture: 'https://raw.githubusercontent.com/jeromeetienne/threex.planets/master/images/mercurymap.jpg', diameter: '4,879 km', day: '58.6 Earth days', year: '88 Earth days', funFact: 'Mercury is the smallest planet in our solar system.' },
-            { name: 'Venus', radius: 1.8, color: 0xffa500, distance: 50, speed: 0.03, texture: 'https://raw.githubusercontent.com/jeromeetienne/threex.planets/master/images/venusmap.jpg', diameter: '12,104 km', day: '243 Earth days', year: '225 Earth days', funFact: 'A day on Venus is longer than its year.' },
+            { name: 'Mercury', radius: 1, color: 0x8c8c8c, distance: 30, speed: 0.04, texture: 'https://raw.githubusercontent.com/vikashkhati007/SolorSystem_BrowserHomePage/main/images/mercury.jpg', diameter: '4,879 km', day: '58.6 Earth days', year: '88 Earth days', funFact: 'Mercury is the smallest planet in our solar system.' },
+            { name: 'Venus', radius: 1.8, color: 0xffa500, distance: 50, speed: 0.03, texture: 'https://raw.githubusercontent.com/vikashkhati007/SolorSystem_BrowserHomePage/main/images/venus_surface.jpg', diameter: '12,104 km', day: '243 Earth days', year: '225 Earth days', funFact: 'A day on Venus is longer than its year.' },
             { 
                 name: 'Earth', radius: 2, color: 0x0077ff, distance: 75, speed: 0.02, 
-                texture: 'https://raw.githubusercontent.com/jeromeetienne/threex.planets/master/images/earthmap1k.jpg', 
-                cloudTexture: 'https://raw.githubusercontent.com/jeromeetienne/threex.planets/master/images/earthcloudmap.png', 
-                diameter: '12,742 km', day: '24 hours', year: '365.25 days', 
+                texture: 'https://raw.githubusercontent.com/vikashkhati007/SolorSystem_BrowserHomePage/main/images/earth.jpg', 
+                cloudTexture: 'https://raw.githubusercontent.com/vikashkhati007/SolorSystem_BrowserHomePage/main/images/earth_clouds.jpg', 
+                diameter: '12,742 km', day: '24 hours', year: '365.25 days',
                 funFact: 'Earth is the only planet known to support life.',
                 moon: {
                     name: 'Moon',
                     radius: 0.5,
                     distance: 4,
                     speed: 0.1,
-                    texture: 'https://raw.githubusercontent.com/jeromeetienne/threex.planets/master/images/moonmap1k.jpg',
+                    texture: 'https://raw.githubusercontent.com/vikashkhati007/SolorSystem_BrowserHomePage/main/images/moon.jpg',
                     diameter: '3,474 km',
                     day: '27.3 Earth days',
                     year: '27.3 Earth days',
                     funFact: 'The Moon is drifting away from Earth by about 3.8 cm per year.'
                 }
             },
-            { name: 'Mars', radius: 1.2, color: 0xff4500, distance: 100, speed: 0.015, texture: 'https://raw.githubusercontent.com/jeromeetienne/threex.planets/master/images/marsmap1k.jpg', diameter: '6,779 km', day: '24.6 hours', year: '687 Earth days', funFact: 'Mars has the tallest volcano, Olympus Mons.' },
-            { name: 'Jupiter', radius: 8, color: 0xffd700, distance: 150, speed: 0.008, texture: 'https://raw.githubusercontent.com/jeromeetienne/threex.planets/master/images/jupitermap.jpg', diameter: '139,820 km', day: '9.9 hours', year: '11.9 Earth years', funFact: 'Jupiter has a giant storm called the Great Red Spot.' },
-            { name: 'Saturn', radius: 7, color: 0xf0e68c, distance: 210, speed: 0.006, texture: 'https://raw.githubusercontent.com/jeromeetienne/threex.planets/master/images/saturnmap.jpg', ringTexture: 'https://raw.githubusercontent.com/jeromeetienne/threex.planets/master/images/saturnringtransparent.gif', diameter: '116,460 km', day: '10.7 hours', year: '29.5 Earth years', funFact: 'Saturn\'s rings are made of ice and rock particles.' },
-            { name: 'Uranus', radius: 5, color: 0xadd8e6, distance: 260, speed: 0.004, texture: 'https://raw.githubusercontent.com/jeromeetienne/threex.planets/master/images/uranusmap.jpg', diameter: '50,724 km', day: '17.2 hours', year: '84 Earth years', funFact: 'Uranus rotates on its side, an axis tilt of 98 degrees.' },
-            { name: 'Neptune', radius: 4.8, color: 0x0000ff, distance: 310, speed: 0.002, texture: 'https://raw.githubusercontent.com/jeromeetienne/threex.planets/master/images/neptunemap.jpg', diameter: '49,244 km', day: '16.1 hours', year: '164.8 Earth years', funFact: 'Neptune has the strongest winds in the solar system.' },
+            { name: 'Mars', radius: 1.2, color: 0xff4500, distance: 100, speed: 0.015, texture: 'https://raw.githubusercontent.com/vikashkhati007/SolorSystem_BrowserHomePage/main/images/mars.jpg', diameter: '6,779 km', day: '24.6 hours', year: '687 Earth days', funFact: 'Mars has the tallest volcano, Olympus Mons.' },
+            { name: 'Jupiter', radius: 8, color: 0xffd700, distance: 150, speed: 0.008, texture: 'https://raw.githubusercontent.com/vikashkhati007/SolorSystem_BrowserHomePage/main/images/jupiter.jpg', diameter: '139,820 km', day: '9.9 hours', year: '11.9 Earth years', funFact: 'Jupiter has a giant storm called the Great Red Spot.' },
+            { name: 'Saturn', radius: 7, color: 0xf0e68c, distance: 210, speed: 0.006, texture: 'https://raw.githubusercontent.com/vikashkhati007/SolorSystem_BrowserHomePage/main/images/saturn.jpg', ringTexture: 'https://raw.githubusercontent.com/vikashkhati007/SolorSystem_BrowserHomePage/main/images/saturn_ring_alpha.png', diameter: '116,460 km', day: '10.7 hours', year: '29.5 Earth years', funFact: 'Saturn\'s rings are made of ice and rock particles.' },
+            { name: 'Uranus', radius: 5, color: 0xadd8e6, distance: 260, speed: 0.004, texture: 'https://raw.githubusercontent.com/vikashkhati007/SolorSystem_BrowserHomePage/main/images/uranus.jpg', diameter: '50,724 km', day: '17.2 hours', year: '84 Earth years', funFact: 'Uranus rotates on its side, an axis tilt of 98 degrees.' },
+            { name: 'Neptune', radius: 4.8, color: 0x0000ff, distance: 310, speed: 0.002, texture: 'https://raw.githubusercontent.com/vikashkhati007/SolorSystem_BrowserHomePage/main/images/neptune.jpg', diameter: '49,244 km', day: '16.1 hours', year: '164.8 Earth years', funFact: 'Neptune has the strongest winds in the solar system.' },
         ];
         
         const planets = [];
